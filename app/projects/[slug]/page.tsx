@@ -8,7 +8,7 @@ export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
 }
 
-export default async function CaseStudy({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ProjectCaseStudy({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const project = projects.find((item) => item.slug === slug);
   if (!project) notFound();
@@ -21,7 +21,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           <span className="wordmark-mark">R</span>
           <span>Rishi Maddela</span>
         </Link>
-        <Link className="back-link" href="/#work">Back to work <span>↖</span></Link>
+        <Link className="back-link" href="/#projects">Back to projects <span>↖</span></Link>
       </header>
       <main className="case-study">
         <section className="case-hero section-pad">
@@ -94,7 +94,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
 
         <section className="next-project section-pad">
           <p className="eyebrow">Next project</p>
-          <Link href={`/work/${nextProject.slug}`}>
+          <Link href={`/projects/${nextProject.slug}`}>
             <h2>{nextProject.name} <span>↗</span></h2>
           </Link>
         </section>

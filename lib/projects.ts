@@ -132,9 +132,30 @@ export const projects: Project[] = [
     outcome: "A simpler path through a necessary task.",
     outcomeDetail: "Placeholder case-study copy for now — add the real project details and client URL when the assets are ready.",
     liveUrl: "https://example.com"
+  },
+  {
+    slug: "github-pr-risk-analysis",
+    name: "GitHub PR risk analysis automation",
+    kicker: "06 / Automation",
+    description: "An automated pull request risk analysis pipeline that evaluates structural risk signals across open PRs, generates AI-assisted technical insights, and delivers executive-level reports via Email and Slack.",
+    tags: ["Automation", "Product design", "AI"],
+    imageLabel: "[ GitHub PR risk analysis dashboard ]",
+    color: "project-amber",
+    brief: "Engineering teams needed a faster way to understand the risk hiding in an active pull request queue.",
+    briefDetail: "The concept brings structural signals, AI-assisted technical analysis, and executive communication into one repeatable workflow.",
+    process: "The pipeline turns repository data into a clear risk summary, then routes the right level of detail to technical and leadership audiences.",
+    processLabels: ["[ PR signal model ]", "[ AI insight flow ]", "[ Email + Slack reporting ]"],
+    processColors: ["project-neutral", "project-neutral", "project-neutral"],
+    detailLead: "Risk is more useful when it arrives with context.",
+    detail: "Instead of another raw status feed, the system highlights what changed, why it matters, and who needs to know.",
+    detailLabels: ["[ Risk summary ]", "[ Executive report ]"],
+    detailColors: ["project-neutral", "project-neutral"],
+    outcome: "A clearer operating picture for every open pull request.",
+    outcomeDetail: "Case-study copy for now — add the production workflow, measurable impact, and repository link when the project is ready to publish.",
+    liveUrl: "https://github.com"
   }
 ];
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
 export const clientProjects = projects.filter((project) => ["pharma", "diagnostic-center"].includes(project.slug));
-export const independentProjects = projects.filter((project) => ["unbiased", "velar-ai", "safeflow"].includes(project.slug));
+export const independentProjects = projects.filter((project) => ["unbiased", "velar-ai", "safeflow", "github-pr-risk-analysis"].includes(project.slug));

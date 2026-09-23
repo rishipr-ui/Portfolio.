@@ -35,8 +35,8 @@ export default function Home() {
                 <p>
                   {heroSubtextOptions[0]}
                 </p>
-                <Link className="line-link" href="#work">
-                  Explore the work <span>↘</span>
+                <Link className="line-link" href="#projects">
+                  Explore the projects <span>↘</span>
                 </Link>
               </div>
             </Reveal>
@@ -44,9 +44,9 @@ export default function Home() {
           <HeroObject />
         </section>
 
-        <section className="work-section section-pad" id="work">
+        <section className="work-section section-pad" id="projects">
           <div className="section-intro">
-            <p className="eyebrow">Selected work</p>
+            <p className="eyebrow">Selected projects</p>
             <h2>
               A few things
               <br />
@@ -55,7 +55,7 @@ export default function Home() {
           </div>
 
           <Reveal>
-            <Link className="featured-project" href={`/work/${featuredProject.slug}`} data-cursor="view">
+            <Link className="featured-project" href={`/projects/${featuredProject.slug}`} data-cursor="view">
               <ScrollImage className={`placeholder featured-image ${featuredProject.color}`} label={featuredProject.imageLabel} src={featuredProject.imageSrc} />
               <div className="project-caption featured-caption">
                 <div>
@@ -72,13 +72,13 @@ export default function Home() {
           </Reveal>
 
           <WorkCategory
-            eyebrow="Work for hire"
+            eyebrow="Client projects"
             intro="The things people brought me in to make slightly less difficult."
             projects={clientProjects}
             startNumber={2}
           />
           <WorkCategory
-            eyebrow="Built on my own time"
+            eyebrow="Independent projects"
             intro="The things I kept working on after nobody asked me to."
             projects={independentProjects}
             startNumber={4}
@@ -127,7 +127,7 @@ function Header() {
         <span>Rishi Maddela</span>
       </Link>
       <nav>
-        <Link href="#work">Work</Link>
+        <Link href="#projects">Projects</Link>
         <Link href="#about">About</Link>
         <Link href="#contact">Contact</Link>
       </nav>
@@ -198,7 +198,7 @@ function WorkCategory({
       <div className="project-grid category-grid">
         {projects.map((project, index) => (
           <Reveal key={project.slug} delay={index % 2 ? 0.08 : 0}>
-            <Link className={`project-card ${index === 1 ? "offset" : ""}`} href={`/work/${project.slug}`} data-cursor="view">
+            <Link className={`project-card ${index === 1 ? "offset" : ""}`} href={`/projects/${project.slug}`} data-cursor="view">
               <ScrollImage className={`placeholder ${project.color}`} label={project.imageLabel} src={project.imageSrc} />
               <div className="project-caption card-caption">
                 <div>
