@@ -241,6 +241,7 @@ i { font-family: var(--display); font-weight: 400; }
 .outcome-section h2 { max-width: 1100px; margin: 60px 0 85px; font-size: clamp(3.8rem, 8vw, 8.5rem); }
 .outcome-bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 35px; color: #b7b7b0; }
 .outcome-bottom > p { max-width: 390px; margin: 0; }
+.case-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px; }
 .button-link { display: inline-block; padding: 14px 19px; border: 1px solid var(--accent); color: var(--accent); transition: background 180ms ease, color 180ms ease; }
 .button-link:hover { background: var(--accent); color: var(--paper); }
 .button-link span { margin-left: 30px; color: var(--accent); }
@@ -292,6 +293,7 @@ i { font-family: var(--display); font-weight: 400; }
   .outcome-section { padding-top: 90px; padding-bottom: 90px; }
   .outcome-section h2 { margin: 45px 0 55px; font-size: clamp(3.8rem, 16vw, 7rem); }
   .outcome-bottom { align-items: flex-start; flex-direction: column; }
+  .case-links { justify-content: flex-start; }
   .next-project { padding-top: 70px; padding-bottom: 90px; }
   .next-project h2 { margin-top: 38px; font-size: clamp(3.8rem, 16vw, 7rem); }
   .about-section::after { right: -40px; bottom: 40px; width: 260px; height: 140px; }

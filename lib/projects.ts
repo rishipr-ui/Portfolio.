@@ -45,7 +45,7 @@ export const projects: Project[] = [
     detailColors: ["project-neutral", "project-neutral"],
     outcome: "A calmer route to the information people came for.",
     outcomeDetail: "Placeholder case-study copy for now — swap in the final outcomes, metrics, and project screenshots when the assets are ready.",
-    liveUrl: "https://example.com",
+    liveUrl: "https://glogen.vercel.app",
     githubUrl: "https://github.com/rishipr-ui"
   },
   {
@@ -116,7 +116,7 @@ export const projects: Project[] = [
     outcome: "A calmer interface for situations that are not calm.",
     outcomeDetail: "Self-directed case-study copy for now — replace with the shipped prototype, repository, or live product when available.",
     liveUrl: "https://example.com",
-    githubUrl: "https://github.com/rishipr-ui"
+    githubUrl: "https://github.com/rishipr-ui/Safeflow"
   },
   {
     slug: "diagnostic-center",
@@ -138,7 +138,7 @@ export const projects: Project[] = [
     detailColors: ["project-neutral", "project-neutral"],
     outcome: "A simpler path through a necessary task.",
     outcomeDetail: "Placeholder case-study copy for now — add the real project details and client URL when the assets are ready.",
-    liveUrl: "https://example.com",
+    liveUrl: "https://darithri.com",
     githubUrl: "https://github.com/rishipr-ui"
   },
   {
@@ -161,8 +161,8 @@ export const projects: Project[] = [
     detailColors: ["project-neutral", "project-neutral"],
     outcome: "A clearer operating picture for every open pull request.",
     outcomeDetail: "Case-study copy for now — add the production workflow, measurable impact, and repository link when the project is ready to publish.",
-    liveUrl: "https://github.com",
-    githubUrl: "https://github.com/rishipr-ui"
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/rishipr-ui/Github-PR-Risk-Analysis-Agent-Automation"
   },
   {
     slug: "agrowatch",
@@ -186,7 +186,7 @@ export const projects: Project[] = [
     outcome: "Earlier visibility into livestock biosecurity risks.",
     outcomeDetail: "Built for SIH 2025 as a digital monitoring system supporting poultry and pig farms.",
     liveUrl: "https://example.com",
-    githubUrl: "https://github.com/rishipr-ui"
+    githubUrl: "https://github.com/rishipr-ui/agro-watch"
   },
   {
     slug: "arbiticker",
@@ -210,7 +210,7 @@ export const projects: Project[] = [
     outcome: "A more transparent path from market data to investment verdict.",
     outcomeDetail: "The engine combines Groq and DeepSeek perspectives with yfinance data and deterministic quantitative thresholds.",
     liveUrl: "https://example.com",
-    githubUrl: "https://github.com/rishipr-ui"
+    githubUrl: "https://github.com/rishipr-ui/Arbiticker"
   },
   {
     slug: "vortiq-x",
@@ -233,7 +233,7 @@ export const projects: Project[] = [
     outcome: "Clearer security feedback from a single URL scan.",
     outcomeDetail: "A responsive Flask-based security platform designed for real-time vulnerability scanning and categorized reporting.",
     liveUrl: "https://example.com",
-    githubUrl: "https://github.com/rishipr-ui"
+    githubUrl: "https://github.com/rishipr-ui/VortiqX"
   }
 ];
 

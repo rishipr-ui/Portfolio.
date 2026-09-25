@@ -82,9 +82,16 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
           </Reveal>
           <div className="outcome-bottom">
             <p>{project.outcomeDetail}</p>
-            <a className="button-link" href={project.githubUrl} target="_blank" rel="noreferrer">
-              View on GitHub <span>↗</span>
-            </a>
+            <div className="case-links">
+              {project.liveUrl !== "https://example.com" ? (
+                <a className="button-link" href={project.liveUrl} target="_blank" rel="noreferrer">
+                  Visit live site <span>↗</span>
+                </a>
+              ) : null}
+              <a className="button-link" href={project.githubUrl} target="_blank" rel="noreferrer">
+                View on GitHub <span>↗</span>
+              </a>
+            </div>
           </div>
         </section>
 
