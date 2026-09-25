@@ -6,6 +6,7 @@ export type Project = {
   tags: string[];
   imageLabel: string;
   imageSrc?: string;
+  additionalImages?: string[];
   color: string;
   featured?: boolean;
   brief: string;
@@ -20,6 +21,7 @@ export type Project = {
   outcome: string;
   outcomeDetail: string;
   liveUrl: string;
+  githubUrl: string;
 };
 
 export const projects: Project[] = [
@@ -32,7 +34,6 @@ export const projects: Project[] = [
     imageLabel: "[ Pharma website screenshot ]",
     imageSrc: "/images/pharma-hero.png",
     color: "project-red",
-    featured: true,
     brief: "A healthcare business needed a clearer digital front door.",
     briefDetail: "There were plenty of services to explain, and none of them benefited from being buried under a heroic amount of copy.",
     process: "The work focused on content structure, stronger wayfinding, and a visual system that knows when to stop talking.",
@@ -44,7 +45,8 @@ export const projects: Project[] = [
     detailColors: ["project-neutral", "project-neutral"],
     outcome: "A calmer route to the information people came for.",
     outcomeDetail: "Placeholder case-study copy for now — swap in the final outcomes, metrics, and project screenshots when the assets are ready.",
-    liveUrl: "https://example.com"
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/rishipr-ui"
   },
   {
     slug: "unbiased",
@@ -66,7 +68,8 @@ export const projects: Project[] = [
     detailColors: ["project-neutral", "project-neutral"],
     outcome: "A clearer answer at a slightly stressful moment.",
     outcomeDetail: "Placeholder case-study copy for now — add the real product story, launch details, and live URL when available.",
-    liveUrl: "https://example.com"
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/rishipr-ui"
   },
   {
     slug: "velar-ai",
@@ -88,7 +91,8 @@ export const projects: Project[] = [
     detailColors: ["project-neutral", "project-neutral"],
     outcome: "A dashboard that knows what deserves attention.",
     outcomeDetail: "Placeholder case-study copy for now — replace with the shipped product story and live URL.",
-    liveUrl: "https://example.com"
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/rishipr-ui"
   },
   {
     slug: "safeflow",
@@ -97,7 +101,9 @@ export const projects: Project[] = [
     description: "A safety monitoring concept that makes the important signal easier to act on when everything else is noisy.",
     tags: ["Product design", "Safety", "Prototype"],
     imageLabel: "[ SafeFlow interface ]",
+    imageSrc: "/images/safeflow.png",
     color: "project-red",
+    featured: true,
     brief: "Safety teams needed a clearer way to see what required attention now.",
     briefDetail: "SafeFlow explores how alerts, context, and next steps can sit together without turning a serious workflow into another dashboard to decode.",
     process: "The direction focuses on hierarchy, calm states, and the smallest useful action at each moment.",
@@ -109,7 +115,8 @@ export const projects: Project[] = [
     detailColors: ["project-neutral", "project-neutral"],
     outcome: "A calmer interface for situations that are not calm.",
     outcomeDetail: "Self-directed case-study copy for now — replace with the shipped prototype, repository, or live product when available.",
-    liveUrl: "https://example.com"
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/rishipr-ui"
   },
   {
     slug: "diagnostic-center",
@@ -131,7 +138,8 @@ export const projects: Project[] = [
     detailColors: ["project-neutral", "project-neutral"],
     outcome: "A simpler path through a necessary task.",
     outcomeDetail: "Placeholder case-study copy for now — add the real project details and client URL when the assets are ready.",
-    liveUrl: "https://example.com"
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/rishipr-ui"
   },
   {
     slug: "github-pr-risk-analysis",
@@ -140,6 +148,7 @@ export const projects: Project[] = [
     description: "An automated pull request risk analysis pipeline that evaluates structural risk signals across open PRs, generates AI-assisted technical insights, and delivers executive-level reports via Email and Slack.",
     tags: ["Automation", "Product design", "AI"],
     imageLabel: "[ GitHub PR risk analysis dashboard ]",
+    imageSrc: "/images/github-pr-risk.png",
     color: "project-amber",
     brief: "Engineering teams needed a faster way to understand the risk hiding in an active pull request queue.",
     briefDetail: "The concept brings structural signals, AI-assisted technical analysis, and executive communication into one repeatable workflow.",
@@ -152,10 +161,92 @@ export const projects: Project[] = [
     detailColors: ["project-neutral", "project-neutral"],
     outcome: "A clearer operating picture for every open pull request.",
     outcomeDetail: "Case-study copy for now — add the production workflow, measurable impact, and repository link when the project is ready to publish.",
-    liveUrl: "https://github.com"
+    liveUrl: "https://github.com",
+    githubUrl: "https://github.com/rishipr-ui"
+  },
+  {
+    slug: "agrowatch",
+    name: "AgroWatch",
+    kicker: "07 / SIH 2025",
+    description: "A farm biosecurity monitoring platform for poultry and pig farms, built to support compliance and early disease-risk tracking.",
+    tags: ["React", "TypeScript", "Supabase", "TailwindCSS", "SIH 2025"],
+    imageLabel: "[ AgroWatch platform ]",
+    imageSrc: "/images/agrowatch.png",
+    additionalImages: ["/images/agrowatch2.png"],
+    color: "project-violet",
+    brief: "Farm teams needed a clearer way to monitor biosecurity conditions across sheds and operations.",
+    briefDetail: "AgroWatch brings farm profiles, shed monitoring, and operational data into one secure dashboard so risks can be identified earlier and tracked more consistently.",
+    process: "The platform combines a practical monitoring workflow with a full-stack data model designed around real farm operations.",
+    processLabels: ["[ Farm profiles ]", "[ Shed monitoring ]", "[ Risk tracking ]"],
+    processColors: ["project-neutral", "project-neutral", "project-neutral"],
+    detailLead: "Biosecurity is easier to act on when the data is together.",
+    detail: "Secure authentication and real-time Supabase data management give teams a dependable view of farm conditions, compliance activity, and emerging risks.",
+    detailLabels: ["[ Monitoring dashboard ]", "[ Farm operations ]"],
+    detailColors: ["project-neutral", "project-neutral"],
+    outcome: "Earlier visibility into livestock biosecurity risks.",
+    outcomeDetail: "Built for SIH 2025 as a digital monitoring system supporting poultry and pig farms.",
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/rishipr-ui"
+  },
+  {
+    slug: "arbiticker",
+    name: "ARBITICKER",
+    kicker: "08 / Agentic AI",
+    description: "An agentic AI stock decision engine that stages a courtroom-style debate between Bull, Bear, and Quant agents before producing a verdict.",
+    tags: ["Python", "FastAPI", "Vite", "Groq", "DeepSeek", "yfinance"],
+    imageLabel: "[ ARBITICKER stock dashboard ]",
+    imageSrc: "/images/arbiticker1.png",
+    additionalImages: ["/images/arbiticker2.png"],
+    color: "project-amber",
+    brief: "Stock analysis needed to show opposing perspectives instead of hiding every assumption behind one recommendation.",
+    briefDetail: "ARBITICKER makes the reasoning visible by asking Bull, Bear, and Quant agents to debate market data before a deterministic engine issues a BUY, HOLD, or SELL verdict.",
+    process: "The system separates agent-generated perspectives from the final rules-based decision, making the analysis both more expressive and easier to inspect.",
+    processLabels: ["[ Multi-agent debate ]", "[ Quantitative signals ]", "[ Verdict engine ]"],
+    processColors: ["project-neutral", "project-neutral", "project-neutral"],
+    detailLead: "Different opinions, one accountable decision.",
+    detail: "A FastAPI backend exposes stock analysis, profiles, and watchlists while the Vite dashboard lets users investigate tickers and manage AI-assisted investment workflows.",
+    detailLabels: ["[ Agent analysis ]", "[ Watchlist dashboard ]"],
+    detailColors: ["project-neutral", "project-neutral"],
+    outcome: "A more transparent path from market data to investment verdict.",
+    outcomeDetail: "The engine combines Groq and DeepSeek perspectives with yfinance data and deterministic quantitative thresholds.",
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/rishipr-ui"
+  },
+  {
+    slug: "vortiq-x",
+    name: "VortiqX",
+    kicker: "09 / Security tooling",
+    description: "An AI-powered security vulnerability scanner for identifying web misconfigurations, SSL issues, and common application vulnerabilities.",
+    tags: ["Python", "Flask", "OpenAI API", "OWASP ZAP", "2025"],
+    imageLabel: "[ VortiqX security scan ]",
+    imageSrc: "/images/vortiq-X.png",
+    color: "project-violet",
+    brief: "Website security reports are more useful when they explain both the risk and what to do next.",
+    briefDetail: "VortiqX scans URLs for security misconfigurations, SSL issues, and common web vulnerabilities, then organizes the findings into a readable risk report.",
+    process: "The platform combines automated checks with AI-assisted explanations so technical findings are easier to understand and act on.",
+    processLabels: ["[ Security headers ]", "[ Vulnerability checks ]", "[ AI remediation ]"],
+    processColors: ["project-neutral", "project-neutral", "project-neutral"],
+    detailLead: "A scan should end with a next step.",
+    detail: "HTTP security header validation, directory traversal testing, XSS protection checks, and OWASP ZAP integration provide the technical signals while OpenAI adds contextual explanations and remediation guidance.",
+    detailLabels: ["[ Scan results ]", "[ Risk reporting ]"],
+    detailColors: ["project-neutral", "project-neutral"],
+    outcome: "Clearer security feedback from a single URL scan.",
+    outcomeDetail: "A responsive Flask-based security platform designed for real-time vulnerability scanning and categorized reporting.",
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/rishipr-ui"
   }
 ];
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
 export const clientProjects = projects.filter((project) => ["pharma", "diagnostic-center"].includes(project.slug));
-export const independentProjects = projects.filter((project) => ["unbiased", "velar-ai", "safeflow", "github-pr-risk-analysis"].includes(project.slug));
+export const designProjects = projects.filter((project) => [
+  "unbiased",
+  "velar-ai"
+].includes(project.slug));
+export const actualProjects = projects.filter((project) => [
+  "arbiticker",
+  "safeflow",
+  "github-pr-risk-analysis",
+  "agrowatch",
+  "vortiq-x"
+].includes(project.slug));

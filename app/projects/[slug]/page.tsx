@@ -37,6 +37,14 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
           <ScrollImage className={`placeholder case-hero-image ${project.color}`} label={project.imageLabel} src={project.imageSrc} />
         </section>
 
+        {project.additionalImages?.length ? (
+          <section className="case-gallery section-pad" aria-label={`${project.name} screens`}>
+            {project.additionalImages.map((imageSrc) => (
+              <ScrollImage key={imageSrc} className={`placeholder gallery-image ${project.color}`} label={project.imageLabel} src={imageSrc} />
+            ))}
+          </section>
+        ) : null}
+
         <section className="case-section section-pad">
           <div className="case-label">
             <p className="eyebrow">01 / The brief</p>
@@ -55,13 +63,6 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
             <p className="case-lead">The work got better once the system got simpler.</p>
             <p>{project.process}</p>
           </Reveal>
-          <div className="process-grid">
-            {project.processLabels.map((label, index) => (
-              <Reveal key={label} delay={index * 0.06}>
-                <ScrollImage className={`placeholder process-image ${project.processColors[index]}`} label={label} />
-              </Reveal>
-            ))}
-          </div>
         </section>
 
         <section className="case-section feature-section section-pad">
@@ -72,11 +73,6 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
             <p className="case-lead">{project.detailLead}</p>
             <p>{project.detail}</p>
           </Reveal>
-          <div className="detail-stack">
-            {project.detailLabels.map((label, index) => (
-              <ScrollImage key={label} className={`placeholder detail-image ${project.detailColors[index]}`} label={label} />
-            ))}
-          </div>
         </section>
 
         <section className="outcome-section section-pad">
@@ -86,8 +82,8 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
           </Reveal>
           <div className="outcome-bottom">
             <p>{project.outcomeDetail}</p>
-            <a className="button-link" href={project.liveUrl} target="_blank" rel="noreferrer">
-              Visit live site <span>↗</span>
+            <a className="button-link" href={project.githubUrl} target="_blank" rel="noreferrer">
+              View on GitHub <span>↗</span>
             </a>
           </div>
         </section>

@@ -207,6 +207,21 @@ i { font-family: var(--display); font-weight: 400; }
 .about-lead, .case-lead { color: var(--ink); font-size: clamp(1.8rem, 3vw, 3rem); letter-spacing: -.055em; line-height: 1.05; }
 .scroll-highlight { display: inline; will-change: color, opacity; }
 .about-copy .line-link { display: inline-block; margin-top: 22px; }
+.proof-section { padding-top: 115px; padding-bottom: 140px; }
+.proof-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.proof-card { position: relative; display: flex; min-height: 330px; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 28px; border: 1px solid var(--line); background: rgba(23, 21, 27, .48); transition: border-color 220ms ease, transform 220ms ease; }
+.proof-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+.proof-card h3 { max-width: 440px; margin-top: 42px; font-size: clamp(2rem, 4vw, 4rem); }
+.resume-card { background: linear-gradient(135deg, rgba(196, 57, 43, .22), rgba(23, 21, 27, .7) 66%); }
+.resume-card::after { position: absolute; right: -45px; bottom: -75px; width: 220px; height: 220px; border: 1px solid rgba(226, 163, 74, .5); border-radius: 50%; content: ""; }
+.proof-arrow { align-self: flex-end; color: var(--accent); font-size: 28px; line-height: 1; }
+.certificate-card { padding: 0; }
+.certificate-card img { display: block; width: 100%; height: 240px; object-fit: cover; opacity: .82; transition: opacity 220ms ease, transform 500ms ease; }
+.certificate-card:hover img { opacity: 1; transform: scale(1.03); }
+.certificate-caption { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; min-height: 90px; padding: 18px 24px 22px; border-top: 1px solid var(--line); }
+.certificate-caption h3 { margin-top: 8px; font-size: clamp(1.25rem, 2vw, 1.8rem); }
+.case-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; padding-top: 28px; }
+.gallery-image { min-height: min(31vw, 430px); }
 .contact-section { padding-top: 140px; padding-bottom: 115px; border-top: 1px solid var(--line); }
 .contact-section h2 { margin: 42px 0 65px; font-size: clamp(4.5rem, 11vw, 11rem); }
 .email-link { display: inline-block; padding-bottom: 8px; border-bottom: 1px solid var(--accent); color: var(--accent); font-size: clamp(1.5rem, 3vw, 3rem); letter-spacing: -.06em; transition: color 180ms ease; }
@@ -221,12 +236,7 @@ i { font-family: var(--display); font-weight: 400; }
 .case-section { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; padding-top: 125px; padding-bottom: 125px; border-top: 1px solid var(--line); }
 .case-copy { max-width: 630px; color: #b7b7b0; font-size: 16px; }
 .case-copy .case-lead { margin-bottom: 30px; }
-.process-grid { grid-column: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 68px; }
-.process-image { min-height: 260px; }
 .feature-section { grid-template-rows: auto auto auto; }
-.detail-stack { grid-column: 2; display: grid; grid-template-columns: 1.3fr .7fr; gap: 18px; margin-top: 70px; }
-.detail-image { min-height: min(40vw, 520px); }
-.detail-image:last-child { margin-top: 90px; }
 .outcome-section { padding-top: 135px; padding-bottom: 145px; border-top: 1px solid var(--line); }
 .outcome-section h2 { max-width: 1100px; margin: 60px 0 85px; font-size: clamp(3.8rem, 8vw, 8.5rem); }
 .outcome-bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 35px; color: #b7b7b0; }
@@ -253,7 +263,7 @@ i { font-family: var(--display); font-weight: 400; }
   .hero-foot .line-link { justify-self: start; }
   .hero-object { right: -7%; bottom: 17%; width: 210px; opacity: .82; }
   .section-intro { margin-bottom: 58px; }
-  .work-section, .about-section { padding-top: 75px; padding-bottom: 90px; }
+  .work-section, .about-section, .proof-section { padding-top: 75px; padding-bottom: 90px; }
   .featured-image { min-height: 83vw; }
   .project-caption { grid-template-columns: 1fr; gap: 0; }
   .project-summary { margin-top: 18px; }
@@ -265,6 +275,11 @@ i { font-family: var(--display); font-weight: 400; }
   .project-card.offset { transform: none; }
   .project-card .placeholder { min-height: 75vw; }
   .about-copy { font-size: 16px; }
+  .proof-grid, .case-gallery { grid-template-columns: 1fr; }
+  .proof-card { min-height: 280px; }
+  .certificate-card img { height: 58vw; }
+  .case-gallery { padding-top: 15px; }
+  .gallery-image { min-height: 68vw; }
   .contact-section { padding-top: 90px; padding-bottom: 75px; }
   .contact-section h2 { margin: 35px 0 45px; font-size: clamp(4rem, 17vw, 7rem); }
   .contact-foot, .site-footer { align-items: flex-start; flex-direction: column; gap: 18px; }
@@ -274,9 +289,6 @@ i { font-family: var(--display); font-weight: 400; }
   .case-intro { margin-bottom: 55px; font-size: 16px; }
   .case-hero-image { min-height: 80vw; }
   .case-section { padding-top: 78px; padding-bottom: 78px; }
-  .process-grid, .detail-stack { grid-column: 1; grid-template-columns: 1fr; margin-top: 45px; }
-  .process-image, .detail-image { min-height: 68vw; }
-  .detail-image:last-child { margin-top: 0; }
   .outcome-section { padding-top: 90px; padding-bottom: 90px; }
   .outcome-section h2 { margin: 45px 0 55px; font-size: clamp(3.8rem, 16vw, 7rem); }
   .outcome-bottom { align-items: flex-start; flex-direction: column; }

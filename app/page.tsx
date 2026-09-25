@@ -3,7 +3,7 @@ import { HeroObject } from "@/components/hero-object";
 import { Reveal } from "@/components/reveal";
 import { ScrollImage } from "@/components/scroll-image";
 import { HighlightText } from "@/components/highlight-text";
-import { clientProjects, featuredProject, independentProjects } from "@/lib/projects";
+import { actualProjects, clientProjects, designProjects, featuredProject } from "@/lib/projects";
 
 const heroOptions = [
   "I design products people actually want to use.",
@@ -78,10 +78,16 @@ export default function Home() {
             startNumber={2}
           />
           <WorkCategory
-            eyebrow="Independent projects"
-            intro="The things I kept working on after nobody asked me to."
-            projects={independentProjects}
+            eyebrow="Design projects"
+            intro="Product interfaces and systems shaped around making complex things easier to use."
+            projects={designProjects}
             startNumber={4}
+          />
+          <WorkCategory
+            eyebrow="Actual projects"
+            intro="Working products, prototypes, and technical systems built to solve a real problem."
+            projects={actualProjects}
+            startNumber={6}
           />
         </section>
 
@@ -112,6 +118,36 @@ export default function Home() {
           </Reveal>
         </section>
 
+        <section className="proof-section section-pad section-rule" id="proof">
+          <div className="section-intro">
+            <p className="eyebrow">A little proof</p>
+            <h2>
+              The work,
+              <br />
+              <i>on paper.</i>
+            </h2>
+          </div>
+          <div className="proof-grid">
+            <a className="proof-card resume-card" href="/resume/resume%20(2).pdf" target="_blank" rel="noreferrer">
+              <div>
+                <p className="eyebrow accent">Resume / PDF</p>
+                <h3>Experience, skills, and the useful details.</h3>
+              </div>
+              <span className="proof-arrow">↗</span>
+            </a>
+            <a className="proof-card certificate-card" href="/certificates/kaggle-5-day-gen-ai-intensive.jpg" target="_blank" rel="noreferrer">
+              <img src="/certificates/kaggle-5-day-gen-ai-intensive.jpg" alt="Kaggle 5-Day Gen AI Intensive certificate" />
+              <div className="certificate-caption">
+                <div>
+                  <p className="eyebrow accent">Certificate</p>
+                  <h3>Kaggle · 5-Day Gen AI Intensive</h3>
+                </div>
+                <span className="proof-arrow">↗</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
         <Contact />
       </main>
       <Footer />
@@ -129,6 +165,7 @@ function Header() {
       <nav>
         <Link href="#projects">Projects</Link>
         <Link href="#about">About</Link>
+        <Link href="#proof">Resume</Link>
         <Link href="#contact">Contact</Link>
       </nav>
     </header>
@@ -144,15 +181,15 @@ function Contact() {
         <br />
         <i><HighlightText>worth opening.</HighlightText></i>
       </h2>
-      <a className="email-link" href="mailto:hello@rishimaddela.com">
-        hello@rishimaddela.com <span>↗</span>
+      <a className="email-link" href="mailto:m.rishipreetham@gmail.com">
+        m.rishipreetham@gmail.com <span>↗</span>
       </a>
       <div className="contact-foot">
         <p>For good problems, bad problems, and the occasional problem in disguise.</p>
         <div className="social-links">
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
-          <a href="mailto:hello@rishimaddela.com">Email ↗</a>
+          <a href="https://www.linkedin.com/in/rishimaddela/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="https://github.com/rishipr-ui" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="mailto:m.rishipreetham@gmail.com">Email ↗</a>
         </div>
       </div>
     </section>
